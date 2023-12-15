@@ -25,3 +25,4 @@ function invertirArray (arr) {
    const arr = ['n', 2, '&', 'a', 'l', 9, '$', 'q', 47, 'i', 'a', 'j', 'b', 'z', '%', 8]
    const arrInvertido = invertirArray(arr)
    console.log(arrInvertido)
+   
