@@ -1,0 +1,112 @@
+main {
+    background: linear-gradient(to bottom, #ffb74d, #81c784, #29b6f6, #e57373);
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: #333;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin: 0.67em;
+    padding-right: 85%;
+}
+
+.nav-bar {
+    background-color: #04061c;
+    color: #fff;
+    padding: 1px;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 30px;
+    justify-items: center;
+}
+
+
+.dog-item {
+    width: 250px;
+    height: 350px;
+    /* Altura fija para la tarjeta */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.dog-item:hover {
+    transform: translateY(-5px);
+}
+
+.dog-image {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.dog-info {
+    padding: 15px;
+    background-color: #5d93c2;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    color: #fff;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+button {
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background-image: linear-gradient(30deg, #0400ff, #4ce3f7);
+    border-radius: 20px;
+    background-size: 100% auto;
+    font-family: inherit;
+    font-size: medium;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    line-height: normal;
+    margin: 10px 0;
+    padding: 1.5rem;
+    margin: auto;
+}
+
+
+button:hover {
+    background-position: right center;
+    background-size: 200% auto;
+    -webkit-animation: pulse 2s infinite;
+    animation: pulse512 1.5s infinite;
+}
+
+@keyframes pulse512 {
+    0% {
+        box-shadow: 0 0 0 0 #05bada66;
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+    }
+}
