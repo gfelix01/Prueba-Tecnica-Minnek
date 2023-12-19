@@ -1,3 +1,4 @@
+/* Estilos para el <main> */
 main {
     background: linear-gradient(to bottom, #ffb74d, #81c784, #29b6f6, #e57373);
     padding: 20px;
@@ -9,12 +10,13 @@ main {
     color: #333;
 }
 
+
 h3 {
     font-size: 1.5em;
     margin: 0.67em;
     padding-right: 85%;
-
 }
+
 
 .nav-bar {
     background-color: #04061c;
@@ -24,6 +26,7 @@ h3 {
     font-size: 18px;
 }
 
+/* Estilos para el contenedor grid */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -31,11 +34,10 @@ h3 {
     justify-items: center;
 }
 
-
+/* Estilos para el elemento de la lista de perros */
 .dog-item {
     width: 250px;
     height: 350px;
-    /* Altura fija para la tarjeta */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -50,15 +52,16 @@ h3 {
     transform: translateY(-5px);
 }
 
+/* Estilos para la imagen del perro */
 .dog-image {
     width: 100%;
     height: 70%;
     object-fit: cover;
-
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
 }
 
+/* Estilos para la información del perro */
 .dog-info {
     padding: 15px;
     background-color: #5d93c2;
@@ -71,8 +74,7 @@ h3 {
     justify-content: space-between;
 }
 
-
-
+/* Estilos para el botón */
 button {
     border: none;
     color: #fff;
@@ -85,23 +87,22 @@ button {
     text-transform: uppercase;
     letter-spacing: .06em;
     line-height: normal;
-    margin: 10px 0;
     padding: 1.5rem;
-    margin: auto;
+    margin: 10px auto;
 }
-
 
 button:hover {
     background-position: right center;
     background-size: 200% auto;
-    -webkit-animation: pulse 2s infinite;
     animation: pulse512 1.5s infinite;
 }
 
+/* Estilos para el footer */
 footer {
     background-color: #070c445f;
 }
 
+/* Animación de pulso para el botón */
 @keyframes pulse512 {
     0% {
         box-shadow: 0 0 0 0 #05bada66;

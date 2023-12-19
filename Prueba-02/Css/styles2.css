@@ -12,6 +12,8 @@ body {
 }
 
 .page-2 {
+    background: #373B44;
+
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
@@ -21,6 +23,7 @@ body {
 }
 
 h1 {
+    background-color: #2c3e50;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -68,16 +71,35 @@ button:hover {
     animation: pulse512 1.5s infinite;
 }
 
-@keyframes pulse512 {
-    0% {
-        box-shadow: 0 0 0 0 #05bada66;
-    }
+.search {
+    display: inline-block;
+    position: relative;
+}
 
-    70% {
-        box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
-    }
+.search input[type="text"] {
+    width: 200px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-    100% {
-        box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
-    }
+.search button[type="submit"] {
+    background-color: #4e99e9;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: .9s ease;
+}
+
+.search button[type="submit"]:hover {
+    transform: scale(1.1);
+    color: rgb(255, 255, 255);
+    background-color: blue;
 }

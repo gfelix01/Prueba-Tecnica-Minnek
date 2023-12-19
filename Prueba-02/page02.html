@@ -4,20 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Administrar Perros</title>
-    <link rel="stylesheet" href="Css/styles2.css">
+    <link rel="stylesheet" href="Css/styles.css">
 </head>
 
 <body>
-    <div class="page-2">
-        <h1>Search</h1>
-        <input type="text" id="searchInput" placeholder="Search by breed">
-        <table id="dogTable">
+    <header class="nav-bar">
+        <h1>Administrar Perros</h1>
+    </header>
 
-        </table>
-        <button onclick="window.location.href = 'index.html';">Return to main page</button>
-    </div>
+    <main>
+        <div class="page-2">
+            <h2>Search</h2>
+            <input type="text" id="searchInput" placeholder="Search by breed">
+            <label for="sortSelect">Sort by:</label>
+            <select id="sortSelect">
+                <option value="name">Name</option>
+                <option value="subBreed">Sub-breed</option>
+            </select>
+            <table id="dogTable">
+                <!-- Aquí se mostrarán los resultados de la búsqueda -->
+            </table>
+            <button id="returnButton">Return to main page</button>
+        </div>
+    </main>
 
-    <script src="crud.js"></script>
+    <script src="js/crud.js" defer></script>
 </body>
 
 </html>
