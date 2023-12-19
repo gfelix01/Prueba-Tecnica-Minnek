@@ -103,3 +103,54 @@ button:hover {
     color: rgb(255, 255, 255);
     background-color: blue;
 }
+
+
+@media only screen and (max-width: 768px) {
+    .page-2 {
+        max-width: 90%;
+
+        margin: 10px auto;
+
+        padding: 10px;
+
+    }
+
+    h1 {
+        margin-bottom: 10px;
+
+        font-size: 24px;
+
+    }
+
+    input[type="text"] {
+        width: calc(100% - 20px);
+
+        margin-bottom: 10px;
+
+    }
+
+    th,
+    td {
+        padding: 6px;
+
+        font-size: 14px;
+
+    }
+
+    button {
+        font-size: 14px;
+
+        padding: 0.5em 1em;
+
+    }
+
+    .search input[type="text"] {
+        width: 150px;
+
+    }
+
+    .search button[type="submit"] {
+        padding: 8px 16px;
+
+    }
+}
