@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
             })
             .then(data => {
                 const breeds = data.message;
-                const breedKeys = Object.keys(breeds).slice(0,70);
+                const breedKeys = Object.keys(breeds).slice(0,5);
             
                 breedKeys.forEach(breed => {
                     fetch(`https://dog.ceo/api/breed/${breed}/images/random`)
