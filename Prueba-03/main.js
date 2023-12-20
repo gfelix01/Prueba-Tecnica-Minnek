@@ -1,8 +1,29 @@
+// Define los arreglos de emojis para diferentes niveles
+const emojisEasy = ['🚀', '👁️', '👨🏾‍💻'];
+const emojisMedium = ['🚀', '👁️', '👨🏾‍💻', '👷🏾‍♂️', '🏠'];
+const emojisHard = ['🚀', '👁️', '👨🏾‍💻', '👷🏾‍♂️', '🏠', '🫀', '🐶', '🍔'];
+
+function startGame(difficulty) {
+  let cards;
+
+ 
+  if (difficulty === 'easy') {
+    cards = emojisEasy.concat(emojisEasy); 
+  } else if (difficulty === 'medium') {
+    cards = emojisMedium.concat(emojisMedium);
+  } else if (difficulty === 'hard') {
+    cards = emojisHard.concat(emojisHard);
+  }
+
+}
+
+
+
 const gameBoard = document.querySelector('.game-board')
-const emojis = ['🚀', '👁️', '👨🏾‍💻', '👷🏾‍♂️', '🏠', '🫀', '🐶', '🍔'] // Emojis para las tarjetas
+const emojis = ['🚀', '👁️', '👨🏾‍💻', '👷🏾‍♂️', '🏠', '🫀', '🐶', '🍔'] 
 const numOfPairs = emojis.length
 
-const cards = emojis.concat(emojis) // Duplica los emojis para crear pares
+const cards = emojis.concat(emojis) 
 let flippedCards = 0
 let firstCard = null
 let secondCard = null
@@ -25,7 +46,7 @@ function createCard (emoji) {
 
   const backSide = document.createElement('div')
   backSide.classList.add('backSide')
-  backSide.textContent = emoji // Emoji para la parte trasera de la tarjeta
+  backSide.textContent = emoji
 
   innerCard.appendChild(frontSide)
   innerCard.appendChild(backSide)
@@ -89,6 +110,8 @@ function resetBoard () {
   lockBoard = false
 }
 
+
+
 function displayWinMessage () {
   const winMessage = document.createElement('div')
   winMessage.classList.add('win-message')
@@ -110,7 +133,35 @@ function startTimer () {
   }, 1000)
 }
 
-cards.sort(() => Math.random() - 0.5) // Baraja las tarjetas aleatoriamente
+function resetGame() {
+    const cardElements = document.querySelectorAll('.myCard');
+    cardElements.forEach(card => gameBoard.removeChild(card));
+
+    flippedCards = 0;
+    firstCard = null;
+    secondCard = null;
+    lockBoard = false;
+    moves = 0;
+    matchedPairs = 0;
+    seconds = 0;
+
+    const shuffledCards = cards.slice().sort(() => Math.random() - 0.5);
+    shuffledCards.forEach(emoji => {
+        const cardElement = createCard(emoji);
+        gameBoard.appendChild(cardElement);
+    });
+
+    const winMessage = document.querySelector('.win-message');
+    if (winMessage) {
+        gameBoard.removeChild(winMessage);
+    }
+
+    updateMoves();
+    startTimer();
+}
+
+
+cards.sort(() => Math.random() - 0.5) 
 
 cards.forEach(emoji => {
   const cardElement = createCard(emoji)
