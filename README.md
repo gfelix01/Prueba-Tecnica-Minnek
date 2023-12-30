@@ -1,6 +1,5 @@
 # Prueba de Reclutamiento - Frontend
 
-¡Bienvenido a la prueba de reclutamiento para la posición de Frontend en nuestra empresa! Este repositorio contiene las soluciones para las tareas y desafíos propuestos durante la evaluación.
 
 ## Estructura del Repositorio
 
